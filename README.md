@@ -19,7 +19,7 @@ from shopify_discount_manager import ShopifyDiscountManager
 discount_manager = ShopifyDiscountManager(shopify_shop_name, login_email, password)
 
 # Create a discount for 10% off all order items
-response = discount_manager.create_discount_code(**{code="TestCode", discount_type='percentage', value=10})
+response = discount_manager.create_discount_code(**{'code': "TestMagicCode", 'discount_type': 'percentage', 'value':10})
 
 content = json.loads(response.content)
 shopify_discount_id = content['discount']['id']
