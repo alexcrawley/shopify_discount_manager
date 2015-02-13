@@ -1,4 +1,4 @@
-# Python Shopify Discount Code API Manager:
+# Python Shopify Discount API Manager:
 
 ---
 #### Note: Based off https://github.com/anduslim/Shopify-Discount-Codes, with original work https://github.com/MartinAmps/Shopify-Private-APIs
@@ -11,11 +11,11 @@ refer to requirements.txt. To install dependencies, run `pip install -r requirem
 ## Usage
 
 After cloning, 
-1. Create a local_settings.py with
 ```python
 import json
 from shopify_discount_manager import ShopifyDiscountManager
 
+# Initialize a manager for your store: shopify_shop_name.myshopify.com
 discount_manager = ShopifyDiscountManager(shopify_shop_name, login_email, password)
 
 # Create a discount for 10% off all order items
@@ -27,7 +27,3 @@ shopify_discount_id = content['discount']['id']
 # Disable discount code
 discount_manager.disable_discount_code(shopify_discount_id)
  ```
-
-## Notes
-
-Hope it's useful!
